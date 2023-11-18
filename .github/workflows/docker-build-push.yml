@@ -9,6 +9,8 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - name: Use the token
+        run: echo "The token is ${{ secrets.GITHUB_TOKEN }}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Docker Buildx
